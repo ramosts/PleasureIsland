@@ -1,0 +1,334 @@
+*{
+    box-sizing: border-bpx;
+}
+.header {
+    padding: 90px;
+    text-align: center;
+    background-image: url(images/beach-sand.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 80%;
+}
+.header h1 {
+    font-size: 40px;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    color:cadetblue;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: darkcyan;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color:lightslategrey;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: darkcyan;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+h2{
+    padding: 80px;
+    text-align: center;
+    color: darkslategray;
+}
+.demo{
+    background-image: url(images/fest.jpg);
+    display: block;
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+footer{
+    background: darkslategray;
+}
+h2{
+    margin: 30px auto;
+    text-align: center;
+    color: gray;
+    font-size: 3em;
+    transition: 0.5s;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2:hover{
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+         0 3px 0 #ccc, 0 4px 0 #ccc,
+         0 5px 0 #ccc, 0 6px 0 #ccc,
+         0 7px 0 #ccc, 0 8px 0 #ccc,
+         0 9px 0 #ccc, 0 10px 0 #ccc,
+         0 11px 0 #ccc, 0 12px 0 #ccc,
+         0 20px 30px rgba(0, 0, 0, 0.5);
+}
+h3{
+  margin: 30px auto;
+    text-align: center;
+    color: gray;
+}
+p{
+    font-size: 1.5em;
+    color:gray;
+}
+
+@media screen and (min-width: 80rem) {
+  .o-container {
+    margin: 1em 2em;
+  }
+}
+.o-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image{
+  max-width:80%;height:auto}
+
+img{vertical-align:middle}
+a{color:inherit}
+
+.top,.bottom{
+  position:fixed;width:100%;z-index:1}
+  .top{
+    top:0}
+  .bottom{
+    bottom:0}
+
+.display-container:hover{
+  display:block}
+  .display-container:hover{
+    display:inline-block}
+
+.o-margin{
+  margin:16px}
+  
+  .margin-top{
+    margin: top 20px;
+  }
+    
+    .o-margin-bottom{
+      margin-bottom:16px!}
+
+      .footer-basic {
+        padding:40px 0;
+        background-color:#ffffff;
+        color: lightslategray;
+      }
+      
+      .footer-basic ul {
+        padding:0;
+        list-style:none;
+        text-align:center;
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:0;
+      }
+      
+      .footer-basic li {
+        padding:0 10px;
+      }
+      
+      .footer-basic ul a {
+        color:inherit;
+        text-decoration:none;
+        opacity:0.8;
+      }
+      
+      .footer-basic ul a:hover {
+        opacity:1;
+      }
+      
+      .footer-basic .social {
+        text-align:center;
+        padding-bottom:25px;
+      }
+      
+      .footer-basic > a {
+        font-size:24px;
+        width:40px;
+        height:40px;
+        line-height:40px;
+        display:inline-block;
+        text-align:center;
+        border-radius:50%;
+        border:1px lightslategray;
+        margin:0 8px;
+        color:inherit;
+        opacity:0.75;
+      }
+      
+      .footer-basic .social > a:hover {
+        opacity:0.9;
+      }
+      
+      .footer-basic .copyright {
+        margin-top:10px;
+        text-align:center;
+        font-size:13px;
+        color:grey;
+        margin-bottom:0;
+      }
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+      
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+      
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
